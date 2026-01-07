@@ -1,3 +1,13 @@
+package com.example;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 @WebServlet("/register")
 public class StudentServlet extends HttpServlet {
 
@@ -10,7 +20,6 @@ public class StudentServlet extends HttpServlet {
         String course = req.getParameter("course");
         String phone = req.getParameter("phone");
 
-        // Send form values to success.jsp
         req.setAttribute("name", name);
         req.setAttribute("email", email);
         req.setAttribute("course", course);
