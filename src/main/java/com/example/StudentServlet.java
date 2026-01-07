@@ -1,6 +1,7 @@
 package com.example;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -31,20 +32,27 @@ public class StudentServlet extends HttpServlet {
         String address = req.getParameter("address");
 
         // ===== Excel File Path =====
-        String path = "/opt/data/student-details.xlsx";  // change path if required
+        String path = "/opt/data/student-details.xlsx";   // change if required
         File file = new File(path);
 
         XSSFWorkbook wb;
         XSSFSheet sheet;
 
         if (file.exists()) {
-            wb = new XSSFWorkbook(file);
+
+            // Open existing file safely (no InvalidFormatException)
+            FileInputStream fis = new FileInputStream(file);
+            wb = new XSSFWorkbook(fis);
+            fis.close();
+
             sheet = wb.getSheetAt(0);
+
         } else {
+
+            // Create new workbook + sheet + header
             wb = new XSSFWorkbook();
             sheet = wb.createSheet("Students");
 
-            // Header Row
             XSSFRow header = sheet.createRow(0);
             header.createCell(0).setCellValue("Student Name");
             header.createCell(1).setCellValue("Father Name");
