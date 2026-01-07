@@ -58,7 +58,6 @@
 <p><b>Phone:</b> ${phone}</p>
 <p><b>Address:</b> ${address}</p>
 
-<a class="excel-btn btn" href="downloadExcel">⬇ Download Excel Sheet</a>
 
 <a class="back-btn btn" href="register.jsp">⬅ Go Back</a>
 
