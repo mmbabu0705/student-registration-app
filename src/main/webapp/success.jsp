@@ -17,26 +17,36 @@
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0,0,0,.3);
         }
-        h2 { text-align:center; color:#333; }
+        h2 {
+            text-align:center;
+            color:#333;
+        }
         p { font-size:14px; }
         b { color:#444; }
-        a {
+
+        .btn {
             display:block;
-            margin-top:15px;
-            text-align:center;
+            margin-top:12px;
             padding:10px;
-            background:#4CAF50;
-            color:white;
-            text-decoration:none;
+            text-align:center;
             border-radius:8px;
+            color:#fff;
+            text-decoration:none;
+            font-weight:bold;
         }
-        a:hover { background:#2e8b57; }
+
+        .back-btn { background:#4CAF50; }
+        .back-btn:hover { background:#2e8b57; }
+
+        .excel-btn { background:#2196F3; }
+        .excel-btn:hover { background:#0b7dda; }
     </style>
 </head>
 
 <body>
 
 <div class="box">
+
 <h2>🎉 Registration Successful</h2>
 
 <p><b>Student Name:</b> ${name}</p>
@@ -48,7 +58,10 @@
 <p><b>Phone:</b> ${phone}</p>
 <p><b>Address:</b> ${address}</p>
 
-<a href="register.jsp">⬅ Go Back</a>
+<a class="excel-btn btn" href="downloadExcel">⬇ Download Excel Sheet</a>
+
+<a class="back-btn btn" href="register.jsp">⬅ Go Back</a>
+
 </div>
 
 </body>
