@@ -5,6 +5,6 @@
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <display-name>student-rgistration-project</display-name>
+    <display-name>student-registration-project</display-name>
 
 </web-app>
