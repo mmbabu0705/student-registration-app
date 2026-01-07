@@ -16,14 +16,23 @@ public class StudentServlet extends HttpServlet {
             throws IOException, ServletException {
 
         String name = req.getParameter("name");
-        String email = req.getParameter("email");
+        String fatherName = req.getParameter("fatherName");
+        String dob = req.getParameter("dob");
+        String gender = req.getParameter("gender");
         String course = req.getParameter("course");
+        String email = req.getParameter("email");
         String phone = req.getParameter("phone");
+        String address = req.getParameter("address");
 
+        // Send values to success.jsp
         req.setAttribute("name", name);
-        req.setAttribute("email", email);
+        req.setAttribute("fatherName", fatherName);
+        req.setAttribute("dob", dob);
+        req.setAttribute("gender", gender);
         req.setAttribute("course", course);
+        req.setAttribute("email", email);
         req.setAttribute("phone", phone);
+        req.setAttribute("address", address);
 
         req.getRequestDispatcher("success.jsp").forward(req, resp);
     }
