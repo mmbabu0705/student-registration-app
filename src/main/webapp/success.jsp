@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Registration Success</title>
+    <title>Registration-Success</title>
 
     <style>
         body {
